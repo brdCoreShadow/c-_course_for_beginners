@@ -7,21 +7,30 @@
 
 using namespace std;
 
-enum Actions
+void devide(float a, float b)
 {
-    read,
-    write,
-    execute,
-    del
-};
+    float res = a / b;
+    if (b == 0)
+    {
+        throw(0);
+    }
+}
 
-struct File
-{
-    string name;
-    float weight;
-    Actions actions;
+// enum Actions
+// {
+//     read,
+//     write,
+//     execute,
+//     del
+// };
 
-};
+// struct File
+// {
+//     string name;
+//     float weight;
+//     Actions actions;
+
+// };
 // struct Car
 // {
 //     string model;
@@ -43,19 +52,36 @@ struct File
 //     }
 // };
 
-int
-main()
+int main()
 {
+
+    float num;
+    cin >> num;
+
+    try
+    {
+        devide(7.8f, num);
+    }
+    catch (int error)
+    {
+        if (error == 0)
+        {
+            cout << "you can't devide on zero" << endl;
+        }
+        else
+        {
+            cout << error << endl;
+        }
+    }
 
     // enum
 
-File my_file;
-my_file.name = "vsevolodych.txt";
-my_file.weight = 7.8f;
-my_file.actions = Actions::execute;
+    // File my_file;
+    // my_file.name = "vsevolodych.txt";
+    // my_file.weight = 7.8f;
+    // my_file.actions = Actions::execute;
 
-cout << my_file.actions << endl;
-
+    // cout << my_file.actions << endl;
 
     // structures
 
